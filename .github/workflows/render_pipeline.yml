@@ -1,8 +1,6 @@
 name: Render & Upload Video Pipeline
 
 on:
-  push:
-    branches: [ main ]
   schedule:
     - cron: '0 8 * * *'
   workflow_dispatch:
@@ -36,9 +34,15 @@ jobs:
       run: |
         python3 main.py
 
+    - name: List Generated Files
+      run: |
+        ls -la
+
     - name: Upload Artifact (Rendered Video)
       uses: actions/upload-artifact@v4
       with:
         name: final-output-video
-        path: output_video.mp4
+        path: |
+          *.mp4
+          **/*.mp4
         retention-days: 7
