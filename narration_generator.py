@@ -19,7 +19,7 @@ def generate_scene_narration(scenes):
         
         # Speed up audio and remove silence
         cmd = [
-            "/opt/homebrew/bin/ffmpeg", "-y",
+            "ffmpeg", "-y",
             "-i", temp_raw,
             "-filter:a", "atempo=1.35,silenceremove=start_periods=1:start_duration=0:start_threshold=-40dB:stop_periods=-1:stop_duration=0.04:stop_threshold=-40dB",
             "-b:a", "192k",
