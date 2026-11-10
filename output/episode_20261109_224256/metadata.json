@@ -1,0 +1,16 @@
+{
+  "title": "The Vanishing Lighthouse of Eilean Mor",
+  "hook": "In December 1900, an entire crew vanished from a remote Scottish lighthouse without a trace, leaving their meals half-eaten.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "narration": "On a desolate island off the coast of Scotland, three experienced keepers tended the light. But on a cold winter night, they disappeared entirely.",
+      "visual_prompt": "An eerie old lighthouse on a dark stormy cliff overlooking rough ocean waves."
+    },
+    {
+      "scene_number": 2,
+      "narration": "When a relief ship finally docked, they found the doors unlocked, the clocks stopped, and chairs overturned, as if everyone vanished mid-sentence.",
+      "visual_prompt": "A dusty, abandoned lighthouse kitchen with a half-eaten meal on the wooden table."
+    }
+  ]
+}

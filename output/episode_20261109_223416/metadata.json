@@ -1,0 +1,26 @@
+{
+  "title": "The Vanishing Village of Kuldhara",
+  "hook": "In a single night in 1825, an entire ancient village vanished into thin air, leaving behind intact homes, personal belongings, and a terrifying curse that lingers to this day.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "narration": "Deep in the scorched deserts of Rajasthan lies Kuldhara, a ghost village frozen in time. Once home to over fifteen hundred prosperous villagers, it now stands utterly desolate.",
+      "visual_prompt": "Cinematic wide shot of ruined sandstone houses in a barren desert landscape, golden hour sunlight casting eerie long shadows."
+    },
+    {
+      "scene_number": 2,
+      "narration": "On a quiet night in 1825, all eight hundred residents from Kuldhara and eighty-two surrounding villages vanished. No one saw them leave. No one knew where they went.",
+      "visual_prompt": "Eerie nighttime shot of empty sandstone archways, dusty wind blowing through abandoned doorways, flickering lanterns."
+    },
+    {
+      "scene_number": 3,
+      "narration": "Legend says a tyrannical state minister demanded the village chief's daughter. Rather than submit, the villagers chose to abandon their ancestral home overnight, casting a dark hex: anyone who tries to inhabit Kuldhara will perish.",
+      "visual_prompt": "Close-up of ancient, cracked clay pots and abandoned household items gathering dust in a dark room."
+    },
+    {
+      "scene_number": 4,
+      "narration": "Modern paranormal investigators report strange moving shadows, sudden drops in temperature, and unexplainable footsteps in the night. To this day, Kuldhara remains completely uninhabited.",
+      "visual_prompt": "Slow zoom-out of the desolate village ruins under a starry, ominous night sky with atmospheric fog."
+    }
+  ]
+}

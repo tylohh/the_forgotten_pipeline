@@ -1,0 +1,26 @@
+{
+  "title": "The Vanishing of Eilean M\u00f2r",
+  "hook": "In December 1900, three lighthouse keepers vanished from a remote Scottish island. They left behind a half-eaten meal, an overturned chair, and a final, impossible log entry.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "narration": "Twenty miles off the bleak coast of Scotland lie the Flannan Isles. On a freezing night in December 1900, a passing steamship noticed something terrifying: the powerful light atop the remote isle of Eilean M\u00f2r had gone completely dark.",
+      "visual_prompt": "Cinematic dark aerial shot of a jagged, storm-swept island in the ocean, a solitary stone lighthouse standing dark against violent waves."
+    },
+    {
+      "scene_number": 2,
+      "narration": "When a relief vessel reached the island days later, no one answered the signal blasts. The main entrance was locked. Inside, time seemed frozen. The clock had stopped, a cold meal sat untouched on the table, and a single chair was knocked over on its side.",
+      "visual_prompt": "Slow, eerie camera movement pushing through a heavy wooden door into a dusty, abandoned 1900s interior, showing cold copper pots and an overturned chair."
+    },
+    {
+      "scene_number": 3,
+      "narration": "Even stranger were the logbook entries. The keeper wrote of a monstrous storm that brought veteran men to tears, praying for salvation. Yet weather reports from the mainland confirmed the skies had been calm and clear all week.",
+      "visual_prompt": "Extreme close-up of a weather-worn, leather-bound logbook resting on a wooden desk, candle light flickering over handwritten cursive script."
+    },
+    {
+      "scene_number": 4,
+      "narration": "The final entry simply read: 'God is over all.' Three experienced men vanished into thin air, leaving no trace, no bodies, and a mystery that the Atlantic ocean refuses to yield.",
+      "visual_prompt": "Atmospheric high-altitude drone shot slowly rising above the lonely lighthouse on a towering cliff edge as thick sea fog swallows the island whole."
+    }
+  ]
+}

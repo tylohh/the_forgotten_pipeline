@@ -1,0 +1,31 @@
+{
+  "title": "The Curse of Kuldhara: The Village That Vanished Overnight",
+  "hook": "In 1825, over fifteen hundred people vanished from a bustling desert town in a single night, leaving behind intact homes, an unsolved mystery, and a dark curse.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "narration": "Deep in the Thar Desert of India lie the decaying yellow sandstone ruins of Kuldhara. For centuries, it was a prosperous home to the Paliwal Brahmins, until one evening in 1825 when silence claimed it forever.",
+      "visual_prompt": "Cinematic slow-motion drone shot of crumbling yellow sandstone ruins stretching across a desolate, wind-swept desert landscape during twilight."
+    },
+    {
+      "scene_number": 2,
+      "narration": "According to local legend, a ruthless state minister demanded the hand of the village chief's daughter, threatening astronomical taxes and violence if the town refused.",
+      "visual_prompt": "Dark atmospheric re-enactment showing torch-lit shadows flickering against ancient stone walls, portraying a secret late-night council of village elders."
+    },
+    {
+      "scene_number": 3,
+      "narration": "Faced with an impossible choice, the entire population of Kuldhara\u2014and 83 surrounding villages\u2014packed what they could carry and slipped into the darkness. By dawn, thousands of people had simply vanished without a trace.",
+      "visual_prompt": "Eerie top-down shot of completely empty, dust-choked stone streets, vacant doorways, and abandoned hearths untouched for centuries."
+    },
+    {
+      "scene_number": 4,
+      "narration": "No one saw them leave, and no historical record reveals where they went. But before departing, the villagers placed a curse on the land: anyone who attempted to settle in Kuldhara would meet a violent death.",
+      "visual_prompt": "Creepy low-angle shot of a ruined temple at night under a blanket of stars, shrouded in a light, unnatural fog."
+    },
+    {
+      "scene_number": 5,
+      "narration": "Today, Kuldhara remains an open tomb of history. Modern paranormal investigators report sudden temperature drops, strange voices in the wind, and an overwhelming feeling of being watched from the empty windows.",
+      "visual_prompt": "Slow push-in shot through an empty window frame of a ruined house, revealing the vast, silent expanse of the desert beyond."
+    }
+  ]
+}

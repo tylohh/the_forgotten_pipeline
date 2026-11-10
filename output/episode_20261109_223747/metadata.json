@@ -1,0 +1,26 @@
+{
+  "title": "The Phantom Village of Kuldhara",
+  "hook": "In a single night in 1825, over eight hundred people vanished from a bustling desert town without leaving a single footprint, abandoning their home to an eternal curse.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "narration": "Deep in the Thar Desert of India lie the crumbling sandstone ruins of Kuldhara. For centuries, it was a prosperous settlement of the Paliwal Brahmins. But today, it stands as a dead silence in the burning sands.",
+      "visual_prompt": "Cinematic drone shot descending over vast, abandoned ancient sandstone village ruins in a barren desert during golden hour."
+    },
+    {
+      "scene_number": 2,
+      "narration": "Legend tells of a tyrannical minister who lusted after the village chief's daughter. He gave the elders an ultimatum: hand her over by the next dawn, or face unimaginable violence.",
+      "visual_prompt": "Dramatic macro shot of dusty vintage oil lamps flickering against dark carved wooden doors in a shadowy ancient courtyard."
+    },
+    {
+      "scene_number": 3,
+      "narration": "Instead of submitting, the entire population of eighty-five neighboring hamlets packed what little they could carry and vanished into the night. When the sun rose, not a single soul remained.",
+      "visual_prompt": "Eerie atmospheric shot of wind whipping sand through deserted, windowless stone doorways under a starless twilight sky."
+    },
+    {
+      "scene_number": 4,
+      "narration": "Before leaving, they cast a powerful curse upon the land: anyone who attempted to inhabit Kuldhara would perish. To this day, the mystery of where they went remains unsolved, and the ruins remain completely deserted.",
+      "visual_prompt": "Slow-motion panning shot of modern paranormal investigators walking through shadowy ruins as dusk turns to pitch darkness."
+    }
+  ]
+}

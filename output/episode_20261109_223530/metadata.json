@@ -1,0 +1,26 @@
+{
+  "title": "The Silence of Eilean M\u00f2r",
+  "hook": "On a desolate island off the coast of Scotland, three lighthouse keepers vanished, leaving behind an untouched meal, a stopped clock, and a logbook describing storms that never existed.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "narration": "On December 26, 1900, the supply ship Hesperus docked at the remote Flannan Isles lighthouse. No one came to greet them. The flag was missing, the supply boxes were left untouched, and an eerie silence hung over the island.",
+      "visual_prompt": "Cinematic dark aerial shot of a desolate, storm-swept rocky island in the North Atlantic, a solitary white lighthouse looming against a grey, misty sky."
+    },
+    {
+      "scene_number": 2,
+      "narration": "When rescuers unlocked the heavy door, they stepped into a frozen moment in time. Inside, a meal sat uneaten on the kitchen table. A chair was overturned as if someone left in a sudden panic, and two of the three heavy oilskin coats were missing.",
+      "visual_prompt": "Slow moody camera panning inside an early 20th-century lighthouse kitchen, dim lantern light illuminating an abandoned wooden table with untouched plates and a knocked-over chair."
+    },
+    {
+      "scene_number": 3,
+      "narration": "The final entries in the logbook made the skin crawl. The keepers noted unprecedented, terrifying gales that shook the heavy stone tower to its foundation\u2014yet coastal weather reports from the mainland recorded complete, dead calm for those exact days.",
+      "visual_prompt": "Close-up of a weather-worn, handwritten logbook resting on a dark desk, pages turning slowly in a subtle draft under flickering candlelight."
+    },
+    {
+      "scene_number": 4,
+      "narration": "Down at the landing stage, massive iron railings were twisted like wire, and concrete blocks weighing tons had been torn from their moorings. Did a rogue wave sweep the men into the abyss, or did something far darker unfold on Eilean M\u00f2r?",
+      "visual_prompt": "Dramatic wide shot of jagged ocean waves crashing violently against dark coastal cliffs and twisted, rusted iron railings near the edge of the turbulent sea."
+    }
+  ]
+}

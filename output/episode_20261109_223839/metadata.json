@@ -1,0 +1,31 @@
+{
+  "title": "The Vanishing at Flannan Isles",
+  "hook": "In December 1900, three lighthouse keepers vanished from a remote Scottish island, leaving behind a frozen clock, an untouched meal, and a diary detailing a storm that never existed.",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "narration": "Twenty miles off the coast of Scotland lies Eilean M\u00f2r, a desolate rock shrouded in heavy mist. For over a century, sailors have spoken in hushed tones about the night the light went out.",
+      "visual_prompt": "Cinematic moody wide shot of a jagged rocky island in the Atlantic Ocean surrounded by dense grey fog, with an isolated white lighthouse towering against dark waves."
+    },
+    {
+      "scene_number": 2,
+      "narration": "When a relief vessel finally reached the island after days of delay, the shore was dead silent. The entrance gates were bolted shut, and no flag flew to greet them.",
+      "visual_prompt": "Slow tracking shot approaching rusted iron gates on a wind-swept cliffside, wet rocks slick with sea spray under a gloomy twilight sky."
+    },
+    {
+      "scene_number": 3,
+      "narration": "Stepping inside the lighthouse, searchers uncovered a chilling freeze-frame: a table set with an untouched meal, a clock stopped dead, and two missing oilskin coats.",
+      "visual_prompt": "Atmospheric interior shot of a 1900s stone kitchen, showing a rusty clock frozen at 8:30, cold cast-iron cookware, and an empty coat peg."
+    },
+    {
+      "scene_number": 4,
+      "narration": "The final diary entry noted a terrifying, monstrous storm that reduced seasoned men to tears. Yet weather records from the mainland proved the skies were completely calm.",
+      "visual_prompt": "Extreme close-up of handwritten ink entries in a weathered leather logbook, softly illuminated by flickering candlelight while shadows stretch across stone walls."
+    },
+    {
+      "scene_number": 5,
+      "narration": "Three men vanished without a trace, swallowed by the island's isolation. Over a century later, the sea still keeps the terrifying secret of Flannan Isles.",
+      "visual_prompt": "High-altitude pull-away shot revealing the tiny desolate island shrinking into the vast, ink-black sea under a cloud-choked sky."
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+file '/Users/tylerdennee/the_forgotten_pipeline/assets/scene_1.jpg'
+duration 7.0302359999999995
+file '/Users/tylerdennee/the_forgotten_pipeline/assets/scene_2.jpg'
+duration 7.0302359999999995
+file '/Users/tylerdennee/the_forgotten_pipeline/assets/scene_3.jpg'
+duration 7.0302359999999995
+file '/Users/tylerdennee/the_forgotten_pipeline/assets/scene_3.jpg'
