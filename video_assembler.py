@@ -11,7 +11,7 @@ def assemble_synchronized_video(scene_clip_paths, output_path="output_video.mp4"
 
     # Concatenate pre-synchronized video+audio clips cleanly
     cmd = [
-        "/opt/homebrew/bin/ffmpeg", "-y",
+        "ffmpeg", "-y",
         "-f", "concat", "-safe", "0",
         "-i", concat_list_path,
         "-c", "copy",

@@ -73,7 +73,7 @@ def render_3d_scene(prompt, output_path, frame_count=90):
         
     # Compile 3D frames into video clip using FFmpeg
     cmd = [
-        "/opt/homebrew/bin/ffmpeg", "-y",
+        "ffmpeg", "-y",
         "-framerate", "30",
         "-i", os.path.join(temp_dir, "frame_%03d.png"),
         "-c:v", "libx264", "-pix_fmt", "yuv420p",

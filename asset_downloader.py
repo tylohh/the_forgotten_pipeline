@@ -2,7 +2,7 @@ import os
 import subprocess
 
 def get_audio_duration(audio_path):
-    cmd = ["/opt/homebrew/bin/ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "default=noprint_wrappers=1:nokey=1", audio_path]
+    cmd = ["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "default=noprint_wrappers=1:nokey=1", audio_path]
     result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
     try:
         return float(result.stdout.strip())
@@ -40,7 +40,7 @@ def download_scene_assets(scenes, audio_paths):
             subprocess.run(["curl", "-s", "-L", fallback_url, "-o", temp_downloaded])
 
         subprocess.run([
-            "/opt/homebrew/bin/ffmpeg", "-y",
+            "ffmpeg", "-y",
             "-stream_loop", "10",
             "-i", temp_downloaded,
             "-t", str(duration),
@@ -51,7 +51,7 @@ def download_scene_assets(scenes, audio_paths):
 
         frames_dir = f"assets/broll_frames_{i}"
         os.makedirs(frames_dir, exist_ok=True)
-        subprocess.run(["/opt/homebrew/bin/ffmpeg", "-y", "-i", temp_processed_video, f"{frames_dir}/fr_%03d.png"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        subprocess.run(["ffmpeg", "-y", "-i", temp_processed_video, f"{frames_dir}/fr_%03d.png"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         
         from PIL import Image, ImageDraw, ImageFont
         try:
@@ -100,7 +100,7 @@ def download_scene_assets(scenes, audio_paths):
                 im.save(f_path)
 
         subprocess.run([
-            "/opt/homebrew/bin/ffmpeg", "-y",
+            "ffmpeg", "-y",
             "-framerate", "30",
             "-i", f"{frames_dir}/fr_%03d.png",
             "-i", audio_path,
