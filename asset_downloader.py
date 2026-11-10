@@ -27,7 +27,7 @@ def download_scene_assets(scenes, audio_paths):
         print(f"-> Downloading real viral video for: '{search_query}'")
         
         subprocess.run([
-            "venv/bin/yt-dlp",
+            "yt-dlp",
             search_query,
             "-o", temp_downloaded,
             "--no-check-certificates",
