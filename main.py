@@ -1,4 +1,20 @@
 
+import os, subprocess, sys
+
+def get_valid_bg(video_path, duration, scene_num):
+    if not os.path.exists(video_path) or os.path.getsize(video_path) == 0:
+        print(f'-> Asset missing for scene {scene_num}. Generating 1080x1920 fallback clip...')
+        fallback_path = f"assets/fallback_scene_{scene_num}.mp4"
+        cmd = [
+            "ffmpeg", "-y", "-f", "lavfi",
+            "-i", f"color=c=0x11111b:s=1080x1920:d={duration}",
+            "-c:v", "libx264", "-pix_fmt", "yuv420p", fallback_path
+        ]
+        subprocess.run(cmd, check=True)
+        return fallback_path
+    return video_path
+
+
 def generate_fallback_background(output_path, duration=10):
     import subprocess
     print(f'Creating procedural fallback background for {output_path}...')
