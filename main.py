@@ -23,7 +23,7 @@ def run_pipeline():
     print("Assembling final synced video...")
     assemble_synchronized_video(scene_clips, "output_video.mp4")
     
-    print("--- Pipeline Completed Successfully! ---")
+    print("--- Pipeline Assembly Complete ---")
 
 if __name__ == "__main__":
     run_pipeline()
