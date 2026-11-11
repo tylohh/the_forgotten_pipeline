@@ -1,4 +1,23 @@
 
+import os, subprocess, sys
+
+def validate_and_generate_scenes():
+    os.makedirs('assets', exist_ok=True)
+    for i in range(1, 10):
+        path = f'assets/synced_scene_{i}.mp4'
+        if os.path.exists(path) and os.path.getsize(path) < 1000:
+            os.remove(path)
+        if not os.path.exists(path):
+            print(f'Generating fallback vertical canvas for {path}...')
+            subprocess.run([
+                'ffmpeg', '-y', '-f', 'lavfi',
+                '-i', 'color=c=0x11111b:s=1080x1920:d=5',
+                '-c:v', 'libx264', '-pix_fmt', 'yuv420p', path
+            ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+validate_and_generate_scenes()
+
+
 import os, subprocess
 
 def check_and_fix_assets():
