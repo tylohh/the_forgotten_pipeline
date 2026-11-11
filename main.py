@@ -1,3 +1,14 @@
+
+def generate_fallback_background(output_path, duration=10):
+    import subprocess
+    print(f'Creating procedural fallback background for {output_path}...')
+    cmd = [
+        'ffmpeg', '-y', '-f', 'lavfi',
+        '-i', f'color=c=0x0f0f15:s=1080x1920:d={duration}',
+        '-c:v', 'libx264', '-pix_fmt', 'yuv420p', output_path
+    ]
+    subprocess.run(cmd, check=True)
+
 import os
 from story_generator import generate_story
 from narration_generator import generate_scene_narration
