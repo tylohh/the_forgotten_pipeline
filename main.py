@@ -1,4 +1,14 @@
 
+from gtts import gTTS
+import os
+
+def ensure_scene_audio(text, output_path):
+    if not os.path.exists(output_path) or os.path.getsize(output_path) < 1000:
+        print(f'Generating fallback TTS audio for: {output_path}')
+        tts = gTTS(text=text if text else "Synchronized documentary narration test.", lang="en")
+        tts.save(output_path)
+
+
 import os, subprocess, sys
 
 def validate_and_generate_scenes():
