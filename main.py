@@ -1,6 +1,46 @@
 
 import requests, os, subprocess
 
+VIRAL_HD_SOURCES = [
+    "https://v.ftcdn.net/05/62/11/14/700_F_562111424_Nn08v0V1E0H9g5a4A50JvVbXqZ4852.mp4",
+    "https://v.ftcdn.net/04/89/32/12/700_F_489321262_nK07Pq3g0V1E0H9g5a4A50JvVbXqZ48.mp4",
+    "https://v.ftcdn.net/05/12/44/98/700_F_512449832_1v08v0V1E0H9g5a4A50JvVbXqZ4852.mp4"
+]
+
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+}
+
+def fetch_validated_clip(scene_num, target_path, duration=8):
+    print(f'-> Fetching real HD clip for scene {scene_num} with browser headers...')
+    os.makedirs(os.path.dirname(target_path) if os.path.dirname(target_path) else '.', exist_ok=True)
+    
+    url = VIRAL_HD_SOURCES[(scene_num - 1) % len(VIRAL_HD_SOURCES)]
+    res = requests.get(url, headers=HEADERS, stream=True, timeout=15)
+    
+    temp_raw = f"assets/raw_clip_{scene_num}.mp4"
+    with open(temp_raw, 'wb') as f:
+        for chunk in res.iter_content(chunk_size=16384):
+            f.write(chunk)
+            
+    # Validate clip size
+    if not os.path.exists(temp_raw) or os.path.getsize(temp_raw) < 50000:
+        raise RuntimeError(f'Downloaded clip for scene {scene_num} is invalid or blocked.')
+
+    # Re-encode to exact QuickTime yuv420p format
+    cmd = [
+        'ffmpeg', '-y', '-i', temp_raw,
+        '-vf', 'scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920',
+        '-t', str(duration),
+        '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-c:a', 'aac',
+        target_path
+    ]
+    subprocess.run(cmd, check=True)
+    if os.path.exists(temp_raw): os.remove(temp_raw)
+
+
+import requests, os, subprocess
+
 REAL_VIRAL_CLIPS = [
     "https://assets.mixkit.co/videos/preview/mixkit-vertical-animation-of-a-scary-haunted-house-42995-large.mp4",
     "https://assets.mixkit.co/videos/preview/mixkit-dark-cinematic-forest-with-fog-42994-large.mp4",
