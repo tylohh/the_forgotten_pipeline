@@ -1,4 +1,24 @@
 
+import os, subprocess
+
+def check_and_fix_assets():
+    print('Auditing background video assets...')
+    for root, dirs, files in os.walk('.'):
+        for file in files:
+            if file.startswith('downloaded_raw_') and file.endswith('.mp4'):
+                path = os.path.join(root, file)
+                if os.path.getsize(path) < 10000:
+                    print(f'-> Corrupt/empty clip detected: {path}. Generating 1080x1920 fallback canvas...')
+                    cmd = [
+                        'ffmpeg', '-y', '-f', 'lavfi',
+                        '-i', 'color=c=0x11111b:s=1080x1920:d=10',
+                        '-c:v', 'libx264', '-pix_fmt', 'yuv420p', path
+                    ]
+                    subprocess.run(cmd, check=True)
+
+check_and_fix_assets()
+
+
 import os, subprocess, sys
 
 def get_valid_bg(video_path, duration, scene_num):
