@@ -1,4 +1,37 @@
 
+import requests, os, subprocess
+
+REAL_VIRAL_CLIPS = [
+    "https://assets.mixkit.co/videos/preview/mixkit-vertical-animation-of-a-scary-haunted-house-42995-large.mp4",
+    "https://assets.mixkit.co/videos/preview/mixkit-dark-cinematic-forest-with-fog-42994-large.mp4",
+    "https://assets.mixkit.co/videos/preview/mixkit-starry-night-sky-over-a-foggy-forest-42993-large.mp4",
+    "https://assets.mixkit.co/videos/preview/mixkit-mysterious-fog-in-a-dark-forest-42992-large.mp4"
+]
+
+def fetch_real_background_video(scene_num, target_path, duration=8):
+    print(f'-> Fetching real HD vertical clip for scene {scene_num}...')
+    os.makedirs(os.path.dirname(target_path) if os.path.dirname(target_path) else '.', exist_ok=True)
+    
+    url = REAL_VIRAL_CLIPS[(scene_num - 1) % len(REAL_VIRAL_CLIPS)]
+    res = requests.get(url, stream=True)
+    
+    temp_raw = f"assets/raw_real_{scene_num}.mp4"
+    with open(temp_raw, 'wb') as f:
+        for chunk in res.iter_content(chunk_size=8192):
+            f.write(chunk)
+            
+    # Format to QuickTime yuv420p 1080x1920 vertical video
+    cmd = [
+        'ffmpeg', '-y', '-i', temp_raw,
+        '-vf', 'scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920',
+        '-t', str(duration),
+        '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-c:a', 'aac',
+        target_path
+    ]
+    subprocess.run(cmd, check=True)
+    if os.path.exists(temp_raw): os.remove(temp_raw)
+
+
 from gtts import gTTS
 import os
 
